@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block title %} Login Success {% endblock %}
+{% block content %}
+
+<h2>WELCOME {{content}}</h2>
+
+<ul>
+    <li class="list_item"><a href="/time_reporting">TIME REPORTING</a></li>
+    {% if clearance == "silver" or clearance == "gold" %}
+    <li class="list_item"><a href="/accounting">ACCOUNTING</a></li>
+    <li class="list_item"><a href="/engineering_documents">ENGINEERING (Q BRANCH)</a></li>
+    {% endif %}
+    <li class="list_item"><a href="/IT_help">IT DEPARTMENT</a></li>
+    {% if clearance == "gold" %}
+    <li class="list_item"><a href="/universal_exports">UNIVERSAL EXPORTS</a></li>
+    {% endif %}
+    <a href="/logout" class="logout">LOGOUT</a>
+</ul>
+
+{% endblock %}

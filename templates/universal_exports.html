@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block title %} Universal Exports {% endblock %}
+{% block content %}
+
+    <div class="firstLogin">
+        <a href="/login_success">MAIN MENU</a>
+    </div>
+    <div class="text_container">
+        <h3 class="pagetext"> Mission Details </h3>
+        <p class="pagetext"> Location: Switzerland</p>
+        <p class="pagetext"> Target: Auric Goldfinger</p>
+        <p class="pagetext"> Occupation: Businessman</p>
+        <p class="pagetext"> Details: Unknown</p>
+        <h3 class = "pagetext"> Investigation Required </h3>
+    </div>
+    <div>
+
+    <audio id = "player" src="/static/EnterSong.wav">
+    </audio>
+    <div class="music_controls">
+        <button onclick="document.getElementById('player').play()">CLICK HERE</button>
+        <button onclick="document.getElementById('player').pause()">END TRANSMISSION</button>
+
+    </div>
+
+{% endblock %}

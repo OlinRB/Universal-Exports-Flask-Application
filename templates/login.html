@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block title %} Login {% endblock %}
+{% block content %}
+
+<div id="logMeIn">
+    <form action="{{ url_for('.login') }}" method="POST"
+          id="login_form">
+        <div class="form-group">
+            <label for="name">Username:</label><input
+                class="form-control" type="text" id="username"
+                name="username" required><br/>
+            <label for="password">Password:</label><input
+                class="form-control" type='password' id="password"
+                name="password" required>
+            <button type="submit" class="btn btn-primary mt-4">
+                Submit
+            </button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
